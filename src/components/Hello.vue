@@ -1,14 +1,14 @@
 <template>
   <div class="hello">
-  <singlePiano :part="part0"></singlePiano>
-  <singlePiano :part="part1"></singlePiano>
-  <singlePiano :part="part2"></singlePiano>
-  <singlePiano :part="part3"></singlePiano>
-  <singlePiano :part="part4"></singlePiano>
-  <singlePiano :part="part5"></singlePiano>
-  <singlePiano :part="part6"></singlePiano>
-  <singlePiano :part="part7"></singlePiano>
-  <singlePiano :part="part8"></singlePiano>
+  <singlePiano :part="part0" :ALL="ALL0"></singlePiano>
+  <singlePiano :part="part1" :ALL="ALL1"></singlePiano>
+  <singlePiano :part="part2" :ALL="ALL1"></singlePiano>
+  <singlePiano :part="part3" :ALL="ALL1"></singlePiano>
+  <singlePiano :part="part4" :ALL="ALL1"></singlePiano>
+  <singlePiano :part="part5" :ALL="ALL1"></singlePiano>
+  <singlePiano :part="part6" :ALL="ALL1"></singlePiano>
+  <singlePiano :part="part7" :ALL="ALL1"></singlePiano>
+  <singlePiano :part="part8" :ALL="ALL2"></singlePiano>
   </div>
 </template>
 
@@ -19,6 +19,10 @@ export default {
   name: 'hello',
   data () {
     return {
+      ALL0:[0,1,2],
+      ALL1:[0,1,2,3,4,5,6,7,8,9,10,11],
+      ALL2:[0],
+
       part0:["01-A    -大字2组","02-AP -大字2组","03-B    -大字2组"],
       part1: ["04-C  -大字1组","05-CP-大字1组","06-D  -大字1组","07-DP-大字1组","08-E  -大字1组","09-F  -大字1组","10-FP-大字1组","11-G  -大字1组","12-GP-大字1组","13-A   -大字1组","14-AP-大字1组","15-B  -大字1组"],
       part2: ["16-C  -大字组","17-CP-大字组","18-D  -大字组","19-DP -大字组","20-E -大字组","21-F -大字组","22-FP-大字组","23-G -大字组","24-GP-大字组","25-A -大字组","26-AP-大字组","27-B -大字组"],

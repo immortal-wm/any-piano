@@ -1,6 +1,6 @@
 <template>
   <div class="singlePiano">
-    <button v-for="index in All" :class="returnClass(index)" @click="sing(index)"></button>
+    <button v-for="index in ALL" :class="returnClass(index)" @click="sing(index)"></button>
   </div>
 </template>
 
@@ -12,14 +12,15 @@ export default {
   name: 'singlePiano',
   data () {  
     return {
-      All:[0,1,2,3,4,5,6,7,8,9,10,11],
+      // All:[0,1,2,3,4,5,6,7,8,9,10,11],
       white:[0,2,4,5,7,9,11],
       black:[1,3,6,8,10],
       src:''
     }
   },
   props: {
-    part:{}
+    part:{},
+    ALL:{}
   },
   computed: {
     // a computed getter
@@ -37,7 +38,8 @@ export default {
       }
     },
     play(index){
-      var audio = new Audio("/static/钢琴音色MP3/"+this.part[index]+".mp3");
+      debugger;
+      var audio = new Audio("./static/钢琴音色MP3/"+this.part[index]+".mp3");
       audio.play();
     },
     sing(index){
